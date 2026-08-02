@@ -52,6 +52,7 @@
             0%, 100% { transform: translateY(0); }
             50% { transform: translateY(-6px); }
         }
+        /* Custom Scrollbar for the modal branch list */
         .custom-scrollbar::-webkit-scrollbar {
             width: 6px;
         }
@@ -129,6 +130,7 @@
                 </div>
             </div>
             
+            <!-- Abstract background blobs for premium feel -->
             <div class="absolute top-0 left-0 w-96 h-96 bg-brand-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob"></div>
             <div class="absolute top-0 right-0 w-96 h-96 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000"></div>
         </div>
@@ -148,19 +150,19 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
                 <!-- Product 1 -->
                 <div class="bg-white rounded-3xl shadow-sm hover:shadow-2xl transition-all duration-300 border border-gray-100 overflow-hidden group flex flex-col">
-                    <div class="h-64 bg-gray-50/50 p-8 flex justify-center items-center relative overflow-hidden">
+                    <div class="h-64 bg-gray-50/50 p-6 flex justify-center items-center relative overflow-hidden">
                         <div class="absolute top-4 left-4 bg-white px-3 py-1.5 rounded-full text-xs font-bold text-gray-700 shadow-sm border border-gray-100 z-10">Vitamins</div>
-                        <img src="https://images.unsplash.com/photo-1649066347101-77b3df6e3f20?q=80&amp;w=600&amp;auto=format&amp;fit=crop" alt="Vitamin C" class="h-full w-full object-cover rounded-xl group-hover:scale-105 transition-transform duration-700">
+                        <img src="https://placehold.co/600x400/0f766e/white?text=Vitamin+C+1000mg" alt="Vitamin C" class="h-full w-full object-cover rounded-xl group-hover:scale-105 transition-transform duration-700">
                     </div>
                     <div class="p-8 flex flex-col flex-grow">
                         <h3 class="text-xl font-bold text-gray-900 mb-2">Ascorbic Acid 1000mg</h3>
-                        <p class="text-gray-500 text-base mb-6 flex-grow">Daily Immune System Support &#8226; 60 Tablets</p>
+                        <p class="text-gray-500 text-base mb-6 flex-grow">Daily Immune System Support • 60 Tablets</p>
                         <div class="flex justify-between items-center pt-4 border-t border-gray-100">
                             <div class="flex flex-col">
                                 <span class="text-sm text-gray-400 line-through">Ksh 1,200</span>
                                 <span class="text-2xl font-black text-brand-900">Ksh 850</span>
                             </div>
-                            <button onclick="addToCart(850)" class="w-14 h-14 rounded-full bg-brand-50 hover:bg-brand-600 hover:text-white text-brand-600 flex items-center justify-center transition-all transform hover:-translate-y-1 hover:shadow-lg">
+                            <button onclick="addToCart(850, 'Ascorbic Acid 1000mg')" class="w-14 h-14 rounded-full bg-brand-50 hover:bg-brand-600 hover:text-white text-brand-600 flex items-center justify-center transition-all transform hover:-translate-y-1 hover:shadow-lg">
                                 <i class="fa-solid fa-cart-plus text-xl"></i>
                             </button>
                         </div>
@@ -169,19 +171,19 @@
 
                 <!-- Product 2 -->
                 <div class="bg-white rounded-3xl shadow-sm hover:shadow-2xl transition-all duration-300 border border-gray-100 overflow-hidden group flex flex-col">
-                    <div class="h-64 bg-gray-50/50 p-8 flex justify-center items-center relative overflow-hidden">
+                    <div class="h-64 bg-gray-50/50 p-6 flex justify-center items-center relative overflow-hidden">
                         <div class="absolute top-4 left-4 bg-white px-3 py-1.5 rounded-full text-xs font-bold text-gray-700 shadow-sm border border-gray-100 z-10">Pain Relief</div>
-                        <img src="https://images.unsplash.com/photo-1584308666744-24d5e4785b27?q=80&amp;w=600&amp;auto=format&amp;fit=crop" alt="Painkillers" class="h-full w-full object-cover rounded-xl group-hover:scale-105 transition-transform duration-700">
+                        <img src="https://placehold.co/600x400/0d9488/white?text=Paracetamol+500mg" alt="Painkillers" class="h-full w-full object-cover rounded-xl group-hover:scale-105 transition-transform duration-700">
                     </div>
                     <div class="p-8 flex flex-col flex-grow">
                         <h3 class="text-xl font-bold text-gray-900 mb-2">Paracetamol 500mg</h3>
-                        <p class="text-gray-500 text-base mb-6 flex-grow">Fast acting pain &amp; fever relief &#8226; 20 Capsules</p>
+                        <p class="text-gray-500 text-base mb-6 flex-grow">Fast acting pain &amp; fever relief • 20 Capsules</p>
                         <div class="flex justify-between items-center pt-4 border-t border-gray-100">
                             <div class="flex flex-col">
                                 <span class="text-transparent text-sm">Spacer</span>
                                 <span class="text-2xl font-black text-brand-900">Ksh 200</span>
                             </div>
-                            <button onclick="addToCart(200)" class="w-14 h-14 rounded-full bg-brand-50 hover:bg-brand-600 hover:text-white text-brand-600 flex items-center justify-center transition-all transform hover:-translate-y-1 hover:shadow-lg">
+                            <button onclick="addToCart(200, 'Paracetamol 500mg')" class="w-14 h-14 rounded-full bg-brand-50 hover:bg-brand-600 hover:text-white text-brand-600 flex items-center justify-center transition-all transform hover:-translate-y-1 hover:shadow-lg">
                                 <i class="fa-solid fa-cart-plus text-xl"></i>
                             </button>
                         </div>
@@ -190,19 +192,19 @@
 
                 <!-- Product 3 -->
                 <div class="bg-white rounded-3xl shadow-sm hover:shadow-2xl transition-all duration-300 border border-gray-100 overflow-hidden group flex flex-col">
-                    <div class="h-64 bg-gray-50/50 p-8 flex justify-center items-center relative overflow-hidden">
+                    <div class="h-64 bg-gray-50/50 p-6 flex justify-center items-center relative overflow-hidden">
                         <div class="absolute top-4 left-4 bg-white px-3 py-1.5 rounded-full text-xs font-bold text-gray-700 shadow-sm border border-gray-100 z-10">Skincare</div>
-                        <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?q=80&amp;w=600&amp;auto=format&amp;fit=crop" alt="Skincare" class="h-full w-full object-cover rounded-xl group-hover:scale-105 transition-transform duration-700">
+                        <img src="https://placehold.co/600x400/14b8a6/white?text=Hydrating+Lotion" alt="Skincare" class="h-full w-full object-cover rounded-xl group-hover:scale-105 transition-transform duration-700">
                     </div>
                     <div class="p-8 flex flex-col flex-grow">
                         <h3 class="text-xl font-bold text-gray-900 mb-2">Hydrating Daily Lotion</h3>
-                        <p class="text-gray-500 text-base mb-6 flex-grow">Dermatologist recommended for dry skin &#8226; 236ml</p>
+                        <p class="text-gray-500 text-base mb-6 flex-grow">Dermatologist recommended for dry skin • 236ml</p>
                         <div class="flex justify-between items-center pt-4 border-t border-gray-100">
                             <div class="flex flex-col">
                                 <span class="text-sm text-gray-400 line-through">Ksh 1,600</span>
                                 <span class="text-2xl font-black text-brand-900">Ksh 1,450</span>
                             </div>
-                            <button onclick="addToCart(1450)" class="w-14 h-14 rounded-full bg-brand-50 hover:bg-brand-600 hover:text-white text-brand-600 flex items-center justify-center transition-all transform hover:-translate-y-1 hover:shadow-lg">
+                            <button onclick="addToCart(1450, 'Hydrating Daily Lotion')" class="w-14 h-14 rounded-full bg-brand-50 hover:bg-brand-600 hover:text-white text-brand-600 flex items-center justify-center transition-all transform hover:-translate-y-1 hover:shadow-lg">
                                 <i class="fa-solid fa-cart-plus text-xl"></i>
                             </button>
                         </div>
@@ -213,21 +215,26 @@
     </main>
 
     <!-- Floating WhatsApp Button -->
-    <a href="#" class="fixed bottom-8 right-8 z-40 bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:bg-[#20bd5a] transition-all hover:scale-105 flex items-center gap-3 group whatsapp-float border-4 border-white">
+    <a href="https://wa.me/254700000000?text=Hi,%20I%20want%20to%20order%20OTC%20medicine" target="_blank" rel="noopener noreferrer" class="fixed bottom-8 right-8 z-40 bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:bg-[#20bd5a] transition-all hover:scale-105 flex items-center gap-3 group whatsapp-float border-4 border-white">
         <i class="fa-brands fa-whatsapp text-3xl"></i>
         <span class="hidden group-hover:block font-bold whitespace-nowrap overflow-hidden max-w-xs pr-3 text-lg">Chat with our AI Pharmacist</span>
     </a>
 
     <!-- Checkout Modal -->
     <div id="checkoutModal" class="fixed inset-0 z-[100] hidden">
+        <!-- Backdrop -->
         <div class="absolute inset-0 bg-gray-900/60 backdrop-blur-md transition-opacity opacity-0" id="modalBackdrop" onclick="closeModal()"></div>
         
+        <!-- Modal Panel -->
         <div class="flex items-center justify-center min-h-screen px-4 pt-4 pb-20 text-center sm:p-0 pointer-events-none">
             <div id="modalPanel" class="relative bg-white rounded-3xl text-left overflow-hidden shadow-2xl transform transition-all sm:my-8 sm:max-w-md w-full pointer-events-auto border border-gray-100 opacity-0 scale-95">
                 
+                <!-- Header -->
                 <div class="bg-white px-8 py-6 border-b border-gray-100 flex justify-between items-center">
                     <div>
-                        <h3 class="text-2xl font-black text-gray-900" id="modal-title">Checkout</h3>
+                        <h3 class="text-2xl font-black text-gray-900" id="modal-title">
+                            Checkout
+                        </h3>
                         <p class="text-sm text-gray-500 font-medium mt-1">Click &amp; Collect via M-Pesa</p>
                     </div>
                     <button onclick="closeModal()" class="text-gray-400 hover:text-gray-800 transition bg-gray-50 hover:bg-gray-100 p-2 rounded-full h-10 w-10 flex items-center justify-center">
@@ -235,7 +242,17 @@
                     </button>
                 </div>
                 
+                <!-- Body -->
                 <div class="px-8 py-8">
+                    <!-- Added Alert Notice Banner -->
+                    <div id="addedNotice" class="mb-6 p-4 bg-emerald-50 border border-emerald-200 text-emerald-800 rounded-2xl flex items-center gap-3">
+                        <i class="fa-solid fa-circle-check text-emerald-600 text-xl"></i>
+                        <div class="text-sm font-semibold">
+                            Item added to cart! Proceed to Checkout below.
+                        </div>
+                    </div>
+
+                    <!-- Order Summary -->
                     <div class="mb-8 bg-gray-50 p-5 rounded-2xl border border-gray-100">
                         <div class="flex justify-between mb-3 text-base font-medium">
                             <span class="text-gray-600">Subtotal (<span id="modalCartCount">0</span> items)</span>
@@ -243,7 +260,7 @@
                         </div>
                         <div class="flex justify-between mb-4 border-b border-gray-200 pb-4 text-base font-medium">
                             <span class="text-gray-600">Service Fee</span>
-                            <span class="text-green-600">Free</span>
+                            <span class="text-green-600 font-bold">Free</span>
                         </div>
                         <div class="flex justify-between items-end">
                             <span class="text-lg font-bold text-gray-900">Total</span>
@@ -251,8 +268,9 @@
                         </div>
                     </div>
 
+                    <!-- Branch Selection -->
                     <div class="mb-6">
-                        <label for="branch" class="block text-sm font-bold text-gray-900 mb-3">Select Pick-up Branch</label>
+                        <label for="branch" class="block text-sm font-bold text-gray-900 mb-3">Select Pick-up Branch (14 Locations)</label>
                         <div class="relative">
                             <select id="branch" name="branch" class="block w-full pl-4 pr-10 py-4 text-base border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 rounded-xl bg-white border-2 appearance-none text-gray-800 font-bold cursor-pointer transition shadow-sm custom-scrollbar">
                                 <option>Westlands (Sarit Centre)</option>
@@ -277,17 +295,21 @@
                         <p class="mt-3 text-sm text-gray-600 font-medium flex items-center"><i class="fa-solid fa-clock mr-2 text-brand-500"></i> Usually ready in 30 minutes.</p>
                     </div>
 
+                    <!-- M-Pesa Phone -->
                     <div>
                         <label class="block text-sm font-bold text-gray-900 mb-3">M-Pesa Number</label>
                         <div class="relative rounded-xl shadow-sm">
                             <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-                                <span class="text-gray-500 font-bold text-lg">+254</span>
+                                <span class="text-gray-500 font-bold text-lg">
+                                    +254
+                                </span>
                             </div>
                             <input type="tel" name="phone" id="phone" class="focus:ring-2 focus:ring-brand-500 focus:border-brand-500 block w-full pl-16 py-4 text-lg border-gray-200 rounded-xl bg-white border-2 outline-none font-bold text-gray-900 transition" placeholder="712 345 678" autocomplete="tel">
                         </div>
                     </div>
                 </div>
                 
+                <!-- Footer -->
                 <div class="bg-white px-8 pb-8 pt-2">
                     <button onclick="processPayment()" class="w-full inline-flex justify-center items-center rounded-xl border border-transparent shadow-xl px-6 py-4 bg-mpesa text-lg font-black text-white hover:bg-[#469a3a] focus:outline-none focus:ring-4 focus:ring-green-200 transition-all transform hover:-translate-y-1">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/1/15/M-PESA_LOGO-01.svg" alt="M-Pesa" class="h-6 mr-3 filter brightness-0 invert">
@@ -299,31 +321,56 @@
         </div>
     </div>
 
+    <!-- Scripts -->
     <script>
-        let cart = { count: 0, total: 0 };
+        let cart = {
+            count: 0,
+            total: 0
+        };
         
-        function addToCart(price) {
+        function addToCart(price, name) {
             cart.count++;
             cart.total += price;
+            
             const badge = document.getElementById('cart-badge');
             badge.innerText = cart.count;
             badge.classList.remove('hidden');
+            
+            // Pop animation
             badge.classList.add('scale-150');
-            setTimeout(() => { badge.classList.remove('scale-150'); }, 200);
+            setTimeout(() => {
+                badge.classList.remove('scale-150');
+            }, 200);
+
+            // Directly open Checkout Modal with confirmation notice
+            openModal(name);
         }
 
-        function openModal() {
+        function openModal(addedProductName) {
             if(cart.count > 0) {
+                // Populate modal data
                 document.getElementById('modalCartCount').innerText = cart.count;
                 document.getElementById('modalSubtotal').innerText = cart.total.toLocaleString();
                 document.getElementById('modalTotal').innerText = cart.total.toLocaleString();
+
+                const notice = document.getElementById('addedNotice');
+                if(addedProductName) {
+                    notice.innerHTML = `<i class="fa-solid fa-circle-check text-emerald-600 text-xl"></i> <div class="text-sm font-semibold">Item added to cart! Proceed to Checkout: Select your pick-up branch -> [Pay with M-Pesa]</div>`;
+                    notice.classList.remove('hidden');
+                } else {
+                    notice.classList.add('hidden');
+                }
+
                 const modal = document.getElementById('checkoutModal');
                 const backdrop = document.getElementById('modalBackdrop');
                 const panel = document.getElementById('modalPanel');
+                
                 modal.classList.remove('hidden');
+                
                 setTimeout(() => {
                     backdrop.classList.remove('opacity-0');
                     backdrop.classList.add('opacity-100');
+                    
                     panel.classList.remove('opacity-0', 'scale-95');
                     panel.classList.add('opacity-100', 'scale-100');
                 }, 10);
@@ -336,11 +383,16 @@
             const modal = document.getElementById('checkoutModal');
             const backdrop = document.getElementById('modalBackdrop');
             const panel = document.getElementById('modalPanel');
+            
             backdrop.classList.remove('opacity-100');
             backdrop.classList.add('opacity-0');
+            
             panel.classList.remove('opacity-100', 'scale-100');
             panel.classList.add('opacity-0', 'scale-95');
-            setTimeout(() => { modal.classList.add('hidden'); }, 300);
+            
+            setTimeout(() => {
+                modal.classList.add('hidden');
+            }, 300);
         }
 
         function processPayment() {
@@ -349,16 +401,21 @@
             btn.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin mr-2"></i> Processing...';
             btn.disabled = true;
             btn.classList.add('opacity-90', 'cursor-not-allowed');
+
             setTimeout(() => {
                 btn.innerHTML = '<i class="fa-solid fa-check mr-2"></i> Payment Prompt Sent';
                 btn.classList.replace('bg-mpesa', 'bg-brand-600');
+                
                 setTimeout(() => {
                     alert("STK Push sent to your phone. Enter your M-Pesa PIN to complete the order.");
                     closeModal();
+                    // Reset
                     btn.innerHTML = originalText;
                     btn.disabled = false;
                     btn.classList.remove('opacity-90', 'cursor-not-allowed');
                     btn.classList.replace('bg-brand-600', 'bg-mpesa');
+                    
+                    // Clear cart
                     cart = { count: 0, total: 0 };
                     document.getElementById('cart-badge').classList.add('hidden');
                 }, 1500);
